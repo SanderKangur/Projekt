@@ -4,12 +4,11 @@ import java.io.File;
 
 public class Mäng {
     public static void main(String[] args) throws Exception {
-        //Reeglid.väljastaReeglid();
-        //Küsimused.väljastaKüsimused();
+        Reeglid.väljastaReeglid();
+        Küsimused.väljastaKüsimused();
+        Vastused.väljastaVastused();
         ArrayList mängija1=Väli.looVäli();
-        Koht jeu = mängija1.get(1);
-        System.out.println(jeu.getKüs());
-        //System.out.println((mängija1.get(1)).getKüs());
+        Koht jeu = new Koht(0, "jeu", new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\Matemaatika.txt"), new File ("C:\\Users\\Sander\\IdeaProjects\\Projekt\\MatemaatikaVastused.txt"));
         Küsimus.väljastaKüsimus(jeu.getKüs(), jeu.getVas());
 
     }

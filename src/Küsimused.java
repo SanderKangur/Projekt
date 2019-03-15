@@ -26,7 +26,11 @@ public class Küsimused {
     public static void väljastaMatemaatika() throws Exception {
         java.io.File fail = new java.io.File("Matemaatika.txt");
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
-            pw.println("Küsimuste stackid");
+            pw.println("5+5");
+            pw.println("16/2");
+            pw.println("55-8");
+            pw.println("14*0");
+            pw.println("|-15|");
         }
     }
 
