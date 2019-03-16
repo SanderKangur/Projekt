@@ -6,19 +6,19 @@ public class Väli {
     //Loob mänguvälja mängijale
 
     public static ArrayList<Koht> looVäli(){
-        File mata = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\Matemaatika.txt");
-        File matav = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\MatemaatikaVastused.txt");
-        File aja = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\Ajalugu.txt");
-        File ajav = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\AjaluguVastused.txt");
-        File meedia = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\Meedia.txt");
-        File meediav = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\MeediaVastused.txt");
-        File varia = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\Varia.txt");
-        File variav = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\VariaVastused.txt");
-        File geo = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\Geograafia.txt");
-        File geov = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\GeograafiaVastused.txt");
-        File teadus = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\Teadus.txt");
-        File teadusv = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\TeadusVastused.txt");
-        File tühi = new File("C:\\Users\\Sander\\IdeaProjects\\Projekt\\tühi.txt");
+        File mata = new File("Matemaatika.txt");
+        File matav = new File("MatemaatikaVastused.txt");
+        File aja = new File("Ajalugu.txt");
+        File ajav = new File("AjaluguVastused.txt");
+        File meedia = new File("Meedia.txt");
+        File meediav = new File("MeediaVastused.txt");
+        File varia = new File("Varia.txt");
+        File variav = new File("VariaVastused.txt");
+        File geo = new File("Geograafia.txt");
+        File geov = new File("GeograafiaVastused.txt");
+        File teadus = new File("Teadus.txt");
+        File teadusv = new File("TeadusVastused.txt");
+        File tühi = new File("tühi.txt");
 
         ArrayList<Koht> väli = new ArrayList<>();
         väli.add(0, new Koht(0,"0", tühi, tühi));
