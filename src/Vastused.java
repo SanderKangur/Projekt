@@ -55,7 +55,7 @@ public class Vastused {
         }
     }
     public static void väljastaTühi() throws Exception {
-        java.io.File fail = new java.io.File("VariaVastused.txt");
+        java.io.File fail = new java.io.File("tühi.txt");
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
             pw.println("tühi");
         }
