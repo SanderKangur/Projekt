@@ -4,13 +4,20 @@ import java.io.File;
 
 public class Mäng {
     public static void main(String[] args) throws Exception {
-        Reeglid.väljastaReeglid();
-        Küsimused.väljastaKüsimused();
-        Vastused.väljastaVastused();
-        ArrayList mängija1=Väli.looVäli();
-        System.out.println("HELLo");
-        Koht jeu = new Koht(0, "jeu", new File("Matemaatika.txt"), new File ("MatemaatikaVastused.txt"));
-        Küsimus.väljastaKüsimus(jeu.getKüs(), jeu.getVas());
+        //Reeglid.väljastaReeglid();
+        //Küsimused.väljastaKüsimused();
+        //Vastused.väljastaVastused();
+        List<Koht> väli1=Väli.looVäli();
+
+        int a=0;
+        int mängija1 = 0;
+        while (a<10){
+            int i = (int)(Math.random()*6)+1;
+            mängija1=mängija1+i;
+            System.out.println(mängija1);
+            //Küsimus.väljastaKüsimus(väli1.get(m1).getKüs(), väli1.get(m1).getVas());
+            a++;
+        }
 
 
     }
