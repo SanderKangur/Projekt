@@ -10,18 +10,21 @@ public class Küsimus {
 
         KüsVasNr põhi = choose(f1, f2);
         String küss = põhi.getKüs();
-        System.out.println(põhi);
         String kategooria = f1.getName().replaceFirst("[.][^.]+$", "");
+
         if(kategooria.equalsIgnoreCase("Üles")){
+            JOptionPane.showMessageDialog(new JFrame("Üles"), "Liigud järgmisele tühjale ruudule!");
             mängija.setMängija(mängija.getMängija()+4);
         }
         if(kategooria.equalsIgnoreCase("Alla")){
+            JOptionPane.showMessageDialog(new JFrame("Alla"), "Liigud eelmisele tühjale ruudule!");
             mängija.setMängija(mängija.getMängija()-4);
         }
         if(kategooria.equalsIgnoreCase("Tühi")){
+            JOptionPane.showMessageDialog(new JFrame("Tühi"), "Siin ruudul ei juhtu midagi!");
         }
         else {
-            String paus = JOptionPane.showInputDialog(null, "Vajuta enterit", kategooria, JOptionPane.QUESTION_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame("Küsimus"), kategooria);
             String sisestatakse = JOptionPane.showInputDialog(null, küss, kategooria, JOptionPane.QUESTION_MESSAGE);
             if (sisestatakse.equalsIgnoreCase(põhi.getVas())) {
                 System.out.println("Õige");

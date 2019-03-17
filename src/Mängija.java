@@ -1,5 +1,6 @@
 public class Mängija {
     private int mängija;
+    private String nimi;
 
     public int getMängija() {
         return mängija;
@@ -9,7 +10,12 @@ public class Mängija {
         this.mängija = mängija;
     }
 
-    public Mängija(int mängija) {
+    public String getNimi() {
+        return nimi;
+    }
+
+    public Mängija(int mängija, String nimi) {
         this.mängija = mängija;
+        this.nimi = nimi;
     }
 }
