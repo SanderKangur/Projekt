@@ -8,15 +8,19 @@ public class Mäng {
         //Küsimused.väljastaKüsimused();
         //Vastused.väljastaVastused();
         List<Koht> väli1=Väli.looVäli();
+        Nupud nupud1= new Nupud(false,false,false,false,false,false);
 
-        int a=0;
-        int mängija1 = 0;
-        while (a<10){
-            int i = (int)(Math.random()*6)+1;
-            mängija1=mängija1+i;
-            System.out.println(mängija1);
-            //Küsimus.väljastaKüsimus(väli1.get(m1).getKüs(), väli1.get(m1).getVas());
-            a++;
+        boolean mäng=true;
+        Mängija mängija1 = new Mängija(0);
+        while (mäng==true){
+            int i= (int)(Math.random()*6)+1;
+            System.out.println("Täring: " + i);
+            mängija1.setMängija(mängija1.getMängija()+i);
+            Küsimus.väljastaKüsimus(väli1.get(mängija1.getMängija()).getKüs(), väli1.get(mängija1.getMängija()).getVas(), nupud1, mängija1);
+           if(nupud1.isMata()==true){
+               break;
+           }
+
         }
 
 

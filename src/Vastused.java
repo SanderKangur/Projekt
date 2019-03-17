@@ -7,6 +7,8 @@ public class Vastused {
         väljastaTeadus();
         väljastaVaria();
         väljastaTühi();
+        väljastaÜles();
+        väljastaAlla();
     }
 
     public static void väljastaAjalugu() throws Exception {
@@ -58,6 +60,18 @@ public class Vastused {
         java.io.File fail = new java.io.File("tühi.txt");
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
             pw.println("tühi");
+        }
+    }
+    public static void väljastaÜles() throws Exception {
+        java.io.File fail = new java.io.File("üles.txt");
+        try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
+            pw.println("üles");
+        }
+    }
+    public static void väljastaAlla() throws Exception {
+        java.io.File fail = new java.io.File("alla.txt");
+        try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
+            pw.println("alla");
         }
     }
 }

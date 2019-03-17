@@ -6,16 +6,46 @@ import java.nio.file.Paths;
 public class Küsimus {
     //Võtab küsimuse ja kontrollib kohe ära, kas vastus on õige
 
-    public static void väljastaKüsimus(File f1, File f2) throws Exception {
+    public static void väljastaKüsimus(File f1, File f2,Nupud nupud, Mängija mängija) throws Exception {
+
         KüsVasNr põhi = choose(f1, f2);
         String küss = põhi.getKüs();
         System.out.println(põhi);
         String kategooria = f1.getName().replaceFirst("[.][^.]+$", "");
-        String sisestatakse = JOptionPane.showInputDialog(null, küss, kategooria, JOptionPane.QUESTION_MESSAGE);
-        if (sisestatakse.equalsIgnoreCase(põhi.getVas())) {
-            System.out.println("Õige");
-        } else {
-            System.out.println("Vale");
+        if(kategooria.equalsIgnoreCase("Üles")){
+            mängija.setMängija(mängija.getMängija()+4);
+        }
+        if(kategooria.equalsIgnoreCase("Alla")){
+            mängija.setMängija(mängija.getMängija()-4);
+        }
+        if(kategooria.equalsIgnoreCase("Tühi")){
+        }
+        else {
+            String paus = JOptionPane.showInputDialog(null, "Vajuta enterit", kategooria, JOptionPane.QUESTION_MESSAGE);
+            String sisestatakse = JOptionPane.showInputDialog(null, küss, kategooria, JOptionPane.QUESTION_MESSAGE);
+            if (sisestatakse.equalsIgnoreCase(põhi.getVas())) {
+                System.out.println("Õige");
+                if (kategooria.equalsIgnoreCase("Matemaatika")) {
+                    nupud.setMata(true);
+                }
+                if (kategooria.equalsIgnoreCase("Meedia")) {
+                    nupud.setMeedia(true);
+                }
+                if (kategooria.equalsIgnoreCase("Ajalugu")) {
+                    nupud.setAja(true);
+                }
+                if (kategooria.equalsIgnoreCase("Geograafia")) {
+                    nupud.setGeo(true);
+                }
+                if (kategooria.equalsIgnoreCase("Teadus")) {
+                    nupud.setTeadus(true);
+                }
+                if (kategooria.equalsIgnoreCase("Varia")) {
+                    nupud.setVaria(true);
+                }
+            } else {
+                System.out.println("Vale");
+            }
         }
     }
 
