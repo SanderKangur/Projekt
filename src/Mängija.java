@@ -1,21 +1,16 @@
-public class Mängija {
+ class Mängija {
+    //Sisaldab mängija praegust asukohta
     private int mängija;
-    private String nimi;
 
-    public int getMängija() {
+     int getMängija() {
         return mängija;
     }
 
-    public void setMängija(int mängija) {
+     void setMängija(int mängija) {
         this.mängija = mängija;
     }
 
-    public String getNimi() {
-        return nimi;
-    }
-
-    public Mängija(int mängija, String nimi) {
+     Mängija(int mängija) {
         this.mängija = mängija;
-        this.nimi = nimi;
     }
 }

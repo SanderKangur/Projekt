@@ -1,4 +1,5 @@
-public class Nupud {
+ class Nupud {
+    //Peab meeles, mis nupud kellelgi olemas on, ja laseb neid ka muuta
     private boolean aja;
     private boolean geo;
     private boolean mata;
@@ -6,7 +7,7 @@ public class Nupud {
     private boolean teadus;
     private boolean varia;
 
-    public Nupud(boolean aja, boolean geo, boolean mata, boolean meedia, boolean teadus, boolean varia) {
+     Nupud(boolean aja, boolean geo, boolean mata, boolean meedia, boolean teadus, boolean varia) {
         this.aja = aja;
         this.geo = geo;
         this.mata = mata;
@@ -15,51 +16,59 @@ public class Nupud {
         this.varia = varia;
     }
 
-    public boolean isAja() {
+     @Override
+     public String toString() {
+         return  "Ajalugu = " + aja +
+                 ", Geograafia = " + geo +
+                 ", Matemaatika = " + mata +
+                 ", Meedia = " + meedia +
+                 ", Teadus = " + teadus +
+                 ", Varia = " + varia;
+     }
+
+     boolean isAja() {
         return aja;
     }
 
-    public boolean isGeo() {
+     boolean isGeo() {
         return geo;
     }
 
-    public boolean isMata() {
-        return mata;
-    }
+     boolean isMata() { return mata; }
 
-    public boolean isMeedia() {
+     boolean isMeedia() {
         return meedia;
     }
 
-    public boolean isTeadus() {
+     boolean isTeadus() {
         return teadus;
     }
 
-    public boolean isVaria() {
+     boolean isVaria() {
         return varia;
     }
 
-    public void setAja(boolean aja) {
+     void setAja(boolean aja) {
         this.aja = aja;
     }
 
-    public void setGeo(boolean geo) {
+     void setGeo(boolean geo) {
         this.geo = geo;
     }
 
-    public void setMata(boolean mata) {
+     void setMata(boolean mata) {
         this.mata = mata;
     }
 
-    public void setMeedia(boolean meedia) {
+     void setMeedia(boolean meedia) {
         this.meedia = meedia;
     }
 
-    public void setTeadus(boolean teadus) {
+     void setTeadus(boolean teadus) {
         this.teadus = teadus;
     }
 
-    public void setVaria(boolean varia) {
+     void setVaria(boolean varia) {
         this.varia = varia;
     }
 }

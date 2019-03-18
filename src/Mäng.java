@@ -8,38 +8,93 @@ public class Mäng {
         //Reeglid.väljastaReeglid();
         //Küsimused.väljastaKüsimused();
         //Vastused.väljastaVastused();
+        JOptionPane.showMessageDialog(new JFrame("INFO"), "Tutvu reeglitega failist Reeglid.txt");
+        JOptionPane.showMessageDialog(new JFrame("INFO"), "MÄNGIMA!");
 
-        List<Koht> väli1=Väli.looVäli();
-        List<Koht> väli2=Väli.looVäli();
-        List<Koht> väli3=Väli.looVäli();
+        List<Koht> väli1 = Väli.looVäli();
+        List<Koht> väli2 = Väli.looVäli();
+        List<Koht> väli3 = Väli.looVäli();
 
-        Nupud nupud1= new Nupud(false,false,false,false,false,false);
-        Nupud nupud2= new Nupud(false,false,false,false,false,false);
-        Nupud nupud3= new Nupud(false,false,false,false,false,false);
+        Nupud nupud1 = new Nupud(false, false, false, false, false, false);
+        Nupud nupud2 = new Nupud(false, false, false, false, false, false);
+        Nupud nupud3 = new Nupud(false, false, false, false, false, false);
 
-        Mängija mängija1 = new Mängija(0, "Mängija1");
-        Mängija mängija2 = new Mängija(0, "Mängija2");
-        Mängija mängija3 = new Mängija(0, "Mängija3");
+        Mängija mängija1 = new Mängija(0);
+        Mängija mängija2 = new Mängija(0);
+        Mängija mängija3 = new Mängija(0);
 
-        boolean mäng=true;
-        while (mäng){
+        boolean mäng = true;
+        while (mäng) {
+
+
+            /********************************** MÄNGIJA 1 **************************************/
+            int i = (int) (Math.random() * 6) + 1;
+            JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija1 kord");
+            JOptionPane.showMessageDialog(new JFrame("Mäng"), "Täringul tuli " + i + " silma!");
+            if (mängija1.getMängija() + i > 55) {
+                mängija1.setMängija(55 - (mängija1.getMängija() + i - 55));
+            } else if (mängija1.getMängija() + i == 55) {
+                System.out.println("Võitis Mängija1");
+                break;
+            } else {
+                mängija1.setMängija(mängija1.getMängija() + i);
+            }
+            JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija1 asub " + mängija1.getMängija() + ". ruudul");
             Küsimus.väljastaKüsimus(väli1.get(mängija1.getMängija()).getKüs(), väli1.get(mängija1.getMängija()).getVas(), nupud1, mängija1);
-            if(nupud1.isMata() && nupud1.isMeedia() && nupud1.isVaria() && nupud1.isTeadus() && nupud1.isGeo() && nupud1.isAja()){
-               System.out.println("võitis mängija1");
-               mäng=false;
+            if (nupud1.isMata() && nupud1.isMeedia() && nupud1.isVaria() && nupud1.isTeadus() && nupud1.isGeo() && nupud1.isAja()) {
+                System.out.println("Võitis Mängija1");
+                break;
+
             }
 
-           Küsimus.väljastaKüsimus(väli2.get(mängija2.getMängija()).getKüs(), väli2.get(mängija2.getMängija()).getVas(), nupud2, mängija2);
-           if(nupud2.isMata() && nupud2.isMeedia() && nupud2.isVaria() && nupud2.isTeadus() && nupud2.isGeo() && nupud2.isAja()){
-               System.out.println("võitis mängija2");
-               mäng = false;
-           }
 
-           Küsimus.väljastaKüsimus(väli3.get(mängija3.getMängija()).getKüs(), väli3.get(mängija3.getMängija()).getVas(), nupud3, mängija3);
-           if(nupud3.isMata() && nupud3.isMeedia() && nupud3.isVaria() && nupud3.isTeadus() && nupud3.isGeo() && nupud3.isAja()){
-               System.out.println("võitis mängija3");
-               mäng = false;
-           }
+            /********************************** MÄNGIJA 2 **************************************/
+            i = (int) (Math.random() * 6) + 1;
+            JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija2 kord");
+            JOptionPane.showMessageDialog(new JFrame("Mäng"), "Täringul tuli " + i + " silma!");
+            if (mängija2.getMängija() + i > 55) {
+                mängija2.setMängija(55 - (mängija2.getMängija() + i - 55));
+            } else if (mängija2.getMängija() + i == 55) {
+                System.out.println("Võitis Mängija2");
+                break;
+            } else {
+                mängija2.setMängija(mängija2.getMängija() + i);
+            }
+            JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija2 asub " + mängija2.getMängija() + ". ruudul");
+            Küsimus.väljastaKüsimus(väli2.get(mängija2.getMängija()).getKüs(), väli2.get(mängija2.getMängija()).getVas(), nupud2, mängija2);
+            if (nupud2.isMata() && nupud2.isMeedia() && nupud2.isVaria() && nupud2.isTeadus() && nupud2.isGeo() && nupud2.isAja()) {
+                System.out.println("Võitis Mängija2");
+                break;
+            }
+
+
+            /********************************** MÄNGIJA 3 **************************************/
+            i = (int) (Math.random() * 6) + 1;
+            JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija3 kord");
+            JOptionPane.showMessageDialog(new JFrame("Mäng"), "Täringul tuli " + i + " silma!");
+            if (mängija3.getMängija() + i > 55) {
+                mängija3.setMängija(55 - (mängija3.getMängija() + i - 55));
+            } else if (mängija3.getMängija() + i == 55) {
+                System.out.println("Võitis Mängija3");
+                break;
+            } else {
+                mängija3.setMängija(mängija3.getMängija() + i);
+            }
+            JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija3 asub " + mängija3.getMängija() + ". ruudul");
+            Küsimus.väljastaKüsimus(väli3.get(mängija3.getMängija()).getKüs(), väli3.get(mängija3.getMängija()).getVas(), nupud3, mängija3);
+            if (nupud3.isMata() && nupud3.isMeedia() && nupud3.isVaria() && nupud3.isTeadus() && nupud3.isGeo() && nupud3.isAja()) {
+                System.out.println("Võitis Mängija3");
+                break;
+            }
+
+
+            /********************************** SKOOR **************************************/
+            System.out.println("Mängija1 nupud: " + nupud1.toString());
+            System.out.println("Mängija1 asub " + mängija1.getMängija() + ". ruudul");
+            System.out.println("Mängija2 nupud: " + nupud2.toString());
+            System.out.println("Mängija2 asub " + mängija2.getMängija() + ". ruudul");
+            System.out.println("Mängija3 nupud: " + nupud3.toString());
+            System.out.println("Mängija3 asub " + mängija3.getMängija() + ". ruudul");
         }
     }
 }

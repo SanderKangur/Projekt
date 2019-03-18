@@ -3,24 +3,24 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class Küsimus {
+ class Küsimus {
     //Võtab küsimuse ja kontrollib kohe ära, kas vastus on õige
 
-    public static void väljastaKüsimus(File f1, File f2,Nupud nupud, Mängija mängija) throws Exception {
+     static void väljastaKüsimus(File f1, File f2,Nupud nupud, Mängija mängija) throws Exception {
 
         KüsVasNr põhi = choose(f1, f2);
         String küss = põhi.getKüs();
         String kategooria = f1.getName().replaceFirst("[.][^.]+$", "");
 
         if(kategooria.equalsIgnoreCase("Üles")){
-            JOptionPane.showMessageDialog(new JFrame("Üles"), "Liigud järgmisele tühjale ruudule!");
+            JOptionPane.showMessageDialog(new JFrame(), "Liigud järgmisele tühjale ruudule!");
             mängija.setMängija(mängija.getMängija()+4);
         }
-        if(kategooria.equalsIgnoreCase("Alla")){
-            JOptionPane.showMessageDialog(new JFrame("Alla"), "Liigud eelmisele tühjale ruudule!");
+        else if(kategooria.equalsIgnoreCase("Alla")){
+            JOptionPane.showMessageDialog(new JFrame(), "Liigud eelmisele tühjale ruudule!");
             mängija.setMängija(mängija.getMängija()-4);
         }
-        if(kategooria.equalsIgnoreCase("Tühi")){
+        else if(kategooria.equalsIgnoreCase("Tühi")){
             JOptionPane.showMessageDialog(new JFrame("Tühi"), "Siin ruudul ei juhtu midagi!");
         }
         else {
@@ -30,29 +30,36 @@ public class Küsimus {
                 System.out.println("Õige");
                 if (kategooria.equalsIgnoreCase("Matemaatika")) {
                     nupud.setMata(true);
+                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Matemaatika nupu!");
                 }
                 if (kategooria.equalsIgnoreCase("Meedia")) {
                     nupud.setMeedia(true);
+                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Meedia nupu!");
                 }
                 if (kategooria.equalsIgnoreCase("Ajalugu")) {
                     nupud.setAja(true);
+                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Ajaloo nupu!");
                 }
                 if (kategooria.equalsIgnoreCase("Geograafia")) {
                     nupud.setGeo(true);
+                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Geograafia nupu!");
                 }
                 if (kategooria.equalsIgnoreCase("Teadus")) {
                     nupud.setTeadus(true);
+                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Teaduse nupu!");
                 }
                 if (kategooria.equalsIgnoreCase("Varia")) {
                     nupud.setVaria(true);
+                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Varia nupu!");
                 }
             } else {
+                JOptionPane.showMessageDialog(new JFrame("Mäng"), "Vastasid valesti!");
                 System.out.println("Vale");
             }
         }
     }
 
-    public static KüsVasNr choose(File f1, File f2) throws Exception {
+     static KüsVasNr choose(File f1, File f2) throws Exception {
         BufferedReader reader = new BufferedReader(new FileReader(f1));
         int lines = 0;
         while (reader.readLine() != null) lines++;

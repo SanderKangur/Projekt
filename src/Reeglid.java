@@ -1,6 +1,7 @@
-public class Reeglid {
+ class Reeglid {
 
-    public static void väljastaReeglid() throws Exception {
+     static void väljastaReeglid() throws Exception {
+
         java.io.File fail = new java.io.File("Reeglid.txt");
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
             pw.println("Tere!");
