@@ -1,4 +1,5 @@
  class Vastused {
+    //Väljastab vastused mängimiseks
 
      static void väljastaVastused() throws Exception {
         väljastaAjalugu();
@@ -32,7 +33,7 @@
         java.io.File fail = new java.io.File("GeograafiaVastused.txt");
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
             pw.println("Vaikne ookean");
-            pw.println("Amazonas");
+            pw.println("Niilus");
             pw.println("Rooma");
             pw.println("litosfäär");
             pw.println("laamade");

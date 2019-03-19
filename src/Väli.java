@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
  class Väli {
-    //Loob mänguvälja mängijale
+    //Loob mänguvälja
 
      static ArrayList<Koht> looVäli(){
         File mata = new File("Matemaatika.txt");

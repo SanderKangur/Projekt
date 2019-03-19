@@ -1,4 +1,5 @@
 class Küsimused {
+    //Väljastab küsimused mängimiseks
 
      static void väljastaKüsimused() throws Exception {
         väljastaAjalugu();
@@ -29,7 +30,7 @@ class Küsimused {
         java.io.File fail = new java.io.File("Geograafia.txt");
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
             pw.println("Suurim ookean.");
-            pw.println("Pikim jõgi.");
+            pw.println("Maailm pikim jõgi.");
             pw.println("Mis linnas asub Colosseum?");
             pw.println("Maa väline tahke kivimikest.");
             pw.println("...liikumine põhjustab maavärinaid ja vulkaanipurskeid.");

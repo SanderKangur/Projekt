@@ -6,14 +6,12 @@ import java.io.File;
 public class Mäng {
     public static void main(String[] args) throws Exception {
         //Reeglid.väljastaReeglid();
-        //Küsimused.väljastaKüsimused();
-        //Vastused.väljastaVastused();
+        Küsimused.väljastaKüsimused();
+        Vastused.väljastaVastused();
         JOptionPane.showMessageDialog(new JFrame("INFO"), "Tutvu reeglitega failist Reeglid.txt");
         JOptionPane.showMessageDialog(new JFrame("INFO"), "MÄNGIMA!");
 
-        List<Koht> väli1 = Väli.looVäli();
-        List<Koht> väli2 = Väli.looVäli();
-        List<Koht> väli3 = Väli.looVäli();
+        List<Koht> väli = Väli.looVäli();
 
         Nupud nupud1 = new Nupud(false, false, false, false, false, false);
         Nupud nupud2 = new Nupud(false, false, false, false, false, false);
@@ -31,17 +29,17 @@ public class Mäng {
             int i = (int) (Math.random() * 6) + 1;
             JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija1 kord");
             JOptionPane.showMessageDialog(new JFrame("Mäng"), "Täringul tuli " + i + " silma!");
-            if (mängija1.getMängija() + i > 55) {
+            if (mängija1.getMängija() + i > 55) { //Mängija veeretas rohkem, kui lõpuni oli jäänud -> liigub tagurpidi
                 mängija1.setMängija(55 - (mängija1.getMängija() + i - 55));
-            } else if (mängija1.getMängija() + i == 55) {
+            } else if (mängija1.getMängija() + i == 55) { //Mängija jõudis lõppu
                 System.out.println("Võitis Mängija1");
                 break;
-            } else {
+            } else { //Tavaline mängukäik
                 mängija1.setMängija(mängija1.getMängija() + i);
             }
             JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija1 asub " + mängija1.getMängija() + ". ruudul");
-            Küsimus.väljastaKüsimus(väli1.get(mängija1.getMängija()).getKüs(), väli1.get(mängija1.getMängija()).getVas(), nupud1, mängija1);
-            if (nupud1.isMata() && nupud1.isMeedia() && nupud1.isVaria() && nupud1.isTeadus() && nupud1.isGeo() && nupud1.isAja()) {
+            Küsimus.väljastaKüsimus(väli.get(mängija1.getMängija()).getKüs(), väli.get(mängija1.getMängija()).getVas(), nupud1, mängija1);
+            if (nupud1.isMata() && nupud1.isMeedia() && nupud1.isVaria() && nupud1.isTeadus() && nupud1.isGeo() && nupud1.isAja()) { //Mängija sai kõik nupud
                 System.out.println("Võitis Mängija1");
                 break;
 
@@ -61,7 +59,7 @@ public class Mäng {
                 mängija2.setMängija(mängija2.getMängija() + i);
             }
             JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija2 asub " + mängija2.getMängija() + ". ruudul");
-            Küsimus.väljastaKüsimus(väli2.get(mängija2.getMängija()).getKüs(), väli2.get(mängija2.getMängija()).getVas(), nupud2, mängija2);
+            Küsimus.väljastaKüsimus(väli.get(mängija2.getMängija()).getKüs(), väli.get(mängija2.getMängija()).getVas(), nupud2, mängija2);
             if (nupud2.isMata() && nupud2.isMeedia() && nupud2.isVaria() && nupud2.isTeadus() && nupud2.isGeo() && nupud2.isAja()) {
                 System.out.println("Võitis Mängija2");
                 break;
@@ -81,7 +79,7 @@ public class Mäng {
                 mängija3.setMängija(mängija3.getMängija() + i);
             }
             JOptionPane.showMessageDialog(new JFrame("Mäng"), "Mängija3 asub " + mängija3.getMängija() + ". ruudul");
-            Küsimus.väljastaKüsimus(väli3.get(mängija3.getMängija()).getKüs(), väli3.get(mängija3.getMängija()).getVas(), nupud3, mängija3);
+            Küsimus.väljastaKüsimus(väli.get(mängija3.getMängija()).getKüs(), väli.get(mängija3.getMängija()).getVas(), nupud3, mängija3);
             if (nupud3.isMata() && nupud3.isMeedia() && nupud3.isVaria() && nupud3.isTeadus() && nupud3.isGeo() && nupud3.isAja()) {
                 System.out.println("Võitis Mängija3");
                 break;

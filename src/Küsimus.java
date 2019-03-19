@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 
         KüsVasNr põhi = choose(f1, f2);
         String küss = põhi.getKüs();
-        String kategooria = f1.getName().replaceFirst("[.][^.]+$", "");
+        String kategooria = f1.getName().replaceFirst("[.][^.]+$", ""); //Kaotab .txt extensioni ära
 
         if(kategooria.equalsIgnoreCase("Üles")){
             JOptionPane.showMessageDialog(new JFrame(), "Liigud järgmisele tühjale ruudule!");
@@ -21,12 +21,12 @@ import java.nio.file.Paths;
             mängija.setMängija(mängija.getMängija()-4);
         }
         else if(kategooria.equalsIgnoreCase("Tühi")){
-            JOptionPane.showMessageDialog(new JFrame("Tühi"), "Siin ruudul ei juhtu midagi!");
+            JOptionPane.showMessageDialog(new JFrame(), "Siin ruudul ei juhtu midagi!");
         }
         else {
             JOptionPane.showMessageDialog(new JFrame("Küsimus"), kategooria);
-            String sisestatakse = JOptionPane.showInputDialog(null, küss, kategooria, JOptionPane.QUESTION_MESSAGE);
-            if (sisestatakse.equalsIgnoreCase(põhi.getVas())) {
+            String sisestatakse = JOptionPane.showInputDialog(null, küss, kategooria, JOptionPane.QUESTION_MESSAGE); //Mängija vastab küsimusele
+            if (sisestatakse.equalsIgnoreCase(põhi.getVas())) { //Kontrollib vastuse õigsust
                 System.out.println("Õige");
                 if (kategooria.equalsIgnoreCase("Matemaatika")) {
                     nupud.setMata(true);
@@ -61,6 +61,8 @@ import java.nio.file.Paths;
     }
 
      static KüsVasNr choose(File f1, File f2) throws Exception {
+         //Tagastab klassi, kus on küsimus ja selle vastus ning rea nr, kus nad asusid
+
         BufferedReader reader = new BufferedReader(new FileReader(f1));
         int lines = 0;
         while (reader.readLine() != null) lines++;
