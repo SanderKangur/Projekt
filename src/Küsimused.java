@@ -14,7 +14,7 @@ class Küsimused {
         java.io.File fail = new java.io.File("Ajalugu.txt");
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
             pw.println("Mis aastal Eesti iseseisvus?");
-            pw.println("Mis aastal asutati Taru Ülikool?");
+            pw.println("Mis aastal asutati Tartu Ülikool?");
             pw.println("Esimene maailmasõda algas...(aasta)");
             pw.println("Esimese üldlaulupeo idee algataja, peamine elluviija ja üldjuht.(perekonnanimi)");
             pw.println("Kus toimus esimene laulupidu?");
