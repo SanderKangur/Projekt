@@ -41,6 +41,7 @@ public class Mäng {
                 JOptionPane.showMessageDialog(new JFrame("Mäng"), "Võitis Mängija1");
                 break;
 
+
             }
 
 

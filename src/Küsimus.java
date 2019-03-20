@@ -54,8 +54,9 @@ import java.nio.file.Paths;
                 }
             } else {
                 JOptionPane.showMessageDialog(new JFrame("Mäng"), "Vastasid valesti!");
-                System.out.println("Vale");
-                System.out.println("Õige vastus oleks olnud: " + põhi.getVas());
+                //System.out.println("Vale");
+                JOptionPane.showMessageDialog(new JFrame("Mäng"), "Õige vastus oleks olnud : " + põhi.getVas());
+                //System.out.println("Õige vastus oleks olnud: " + põhi.getVas());
             }
         }
     }
