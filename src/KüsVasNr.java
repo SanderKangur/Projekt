@@ -17,7 +17,4 @@
         return Vas;
     }
 
-     int getNr() {
-        return nr;
-    }
 }

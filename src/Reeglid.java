@@ -11,13 +11,13 @@
             pw.println("2) Jõua esimesena lõppu");
             pw.println("Kategooriad on: Matemaatika, Meedia, Ajalugu, Geograafia, Teadus, Varia");
             pw.println();
-            pw.println("Kasutajal on mängu alguses võimalik valida: ");
-            pw.println("Täringutahkude arv - Mõjutab esimesena lõppu jõudmise võiduvõimalusi");
-            pw.println("Mängutüüp - Saab lisada joomise või füüsilised tegevused");
-            pw.println("Raskusaste - Mõjutab shoots/ladders arvu ja küsimuste raskust");
-            pw.println();
             pw.println("Mänguväli: ");
-            pw.println("Väljal on kategooriatele vastavad kohad, shoots/ladders");
+            pw.println("Väljal on kategooriatele vastavad ruudud küsimuste jaoks, shoots/ladders");
+            pw.println("ja tühjad ruudud, kus midagi ei juhtu - kokku 56 ruutu");
+            pw.println();
+            pw.println("Mängukäik: ");
+            pw.println("Mäng algab esimese mängija täringu veeretusega");
+            pw.println("Iga raundi lõpus väljastatakse hetkeskoor");
             pw.println();
             pw.println("EDU!");
         }

@@ -5,12 +5,12 @@ Mängu võitmiseks on kaks võimalust:
 2) Jõua esimesena lõppu
 Kategooriad on: Matemaatika, Meedia, Ajalugu, Geograafia, Teadus, Varia
 
-Kasutajal on mängu alguses võimalik valida: 
-Täringutahkude arv - Mõjutab esimesena lõppu jõudmise võiduvõimalusi
-Mängutüüp - Saab lisada joomise või füüsilised tegevused
-Raskusaste - Mõjutab shoots/ladders arvu ja küsimuste raskust
-
 Mänguväli: 
-Väljal on kategooriatele vastavad kohad, shoots/ladders
+Väljal on kategooriatele vastavad ruudud küsimuste jaoks, shoots/ladders
+ja tühjad ruudud, kus midagi ei juhtu - kokku 56 ruutu
+
+Mängukäik: 
+Mäng algab esimese mängija täringu veeretusega
+Iga raundi lõpus väljastatakse hetkeskoor
 
 EDU!

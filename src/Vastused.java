@@ -16,14 +16,14 @@
      static void väljastaAjalugu() throws Exception {
         java.io.File fail = new java.io.File("AjaluguVastused.txt");
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
-            pw.println("1917");
+            pw.println("1918");
             pw.println("1632");
             pw.println("1914");
             pw.println("Jannsen");
             pw.println("Tartus");
             pw.println("sumerid");
             pw.println("vaaraod");
-            pw.println("Zeuzi");
+            pw.println("Zeusi");
             pw.println("Pythagorase");
 
         }
@@ -95,7 +95,7 @@
         java.io.File fail = new java.io.File("VariaVastused.txt");
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
             pw.println("Saskia Alusalu");
-            pw.println("Zeuzi");
+            pw.println("Zeusi");
             pw.println("Tyler Joseph");
             pw.println("14");
             pw.println("kõrgusekartus");
