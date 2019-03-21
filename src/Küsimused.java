@@ -64,7 +64,7 @@ class Küsimused {
             pw.println("Mis aastal oli Kimye pulm?");
             pw.println("Kes/mis on kõige enam \"laike\" kogunud pildi peal Instagramis?");
             pw.println("Youtube kõige enim \"dislaigitud\" video.");
-            pw.println("Kellel on kõige enam \"tellijaid\" YouTubes?");
+            pw.println("Kes omab kõige enam \"tellijaid\" YouTubes?");
             pw.println("Kes võitis Eesti Muusikaauhindadel Aasta Naisartisti auhinna?");
             pw.println("Kes võitis Eesti Muusikaauhindadel Aasta Meesartisti auhinna?");
             /*pw.println("");

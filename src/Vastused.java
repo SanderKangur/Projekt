@@ -34,7 +34,7 @@
         try (java.io.PrintWriter pw = new java.io.PrintWriter(fail, "UTF-8")) {
             pw.println("Vaikne ookean");
             pw.println("Niilus");
-            pw.println("Rooma");
+            pw.println("Roomas");
             pw.println("litosfäär");
             pw.println("laamade");
             pw.println("reljeef");
